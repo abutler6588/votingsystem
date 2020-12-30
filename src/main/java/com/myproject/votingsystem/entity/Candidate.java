@@ -1,38 +1,45 @@
-package com.votingsystem.entity;
+package com.myproject.votingsystem.entity;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table(name="citizens")
-public class Citizen {
-
+@Table(name="candidates")
+@Entity
+public class Candidate {
+	
 	@Id
 	@Column(name="id")
 	private Long id;
 
 	public Long getId() {
-		return id;
+		return this.id;
 	}
 
 	public void setId(Long id) {
 		this.id = id;
 	}
 	
-	@Column(name= "citizen_name")
+	@Column(name= "candidate_name")
 	private String name;
-		
-	public Citizen(Long id, String name) {
+	
+	public String getName() {
+		return name;
+	}
+
+	public Candidate(Long id, String name) {
 		super();
 		this.id = id;
 		this.name = name;
 	}
-
-	public String getName() {
-		return name;
+	
+	public Candidate() {
+		super();
 	}
 
 	public void setName(String name) {
 		this.name = name;
 	}
+	
 }
