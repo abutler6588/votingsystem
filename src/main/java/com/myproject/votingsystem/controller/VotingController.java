@@ -44,5 +44,16 @@ public class VotingController {
 			return "/alreadyVoted.html";
 		}
 	}
+	
+	@RequestMapping("/voteFor")
+	public String voteFor(@RequestParam Long id) {
+		
+		Candidate c = candidateRepo.findById((long)id);
+		c.setNumberOfVotes(c.getNumberOfVotes()+1);
+		candidateRepo.save(c);
+		
+		return "voted.html";
+		
+	}
 	}
 	
