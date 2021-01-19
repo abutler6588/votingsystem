@@ -28,13 +28,13 @@
 
 - Candidate selection input from user 
 
-<img src="/images/picture2.png">
+<img src="/images/Picture2.png">
 
 - Thank citizen for thier vote 
 
-<img src="/images/picture3.png">
+<img src="/images/Picture3.png">
 
 - Error screen should citzien have already voted 
 
-<img src="/images/picture4.png">
+<img src="/images/Picture4.png">
 
